@@ -1,0 +1,11 @@
+node_modules
+dist
+*.log
+.DS_Store
+tmp-*.mjs
+imgbrd.exe
+android/.gradle
+android/app/build
+android/build
+android/capacitor-cordova-android-plugins/build
+*.apk

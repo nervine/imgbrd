@@ -1,0 +1,5 @@
+package de.imgbrd.app;
+
+import com.getcapacitor.BridgeActivity;
+
+public class MainActivity extends BridgeActivity {}

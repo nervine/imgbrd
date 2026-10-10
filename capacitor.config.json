@@ -1,0 +1,8 @@
+{
+  "appId": "de.imgbrd.app",
+  "appName": "imgbrd",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": true
+  }
+}
