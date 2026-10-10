@@ -1,37 +1,47 @@
 # imgbrd
 
-Eigener Booru-Browser mit endlosem Scroll, Tag-Suche, Score-Filter, Zufallssortierung und gespeicherten Tag-Sammlungen.
+A custom Booru browser featuring infinite scrolling, tag search, score filtering, random sorting, and saved tag collections.
+Built-in boards: guro.booru.org, gelbooru.com, booru.eu, rule34.xxx, xbooru.com, allgirl.booru.org, zoo.booru.org. Additional boards can be added through the interface.
 
-Eingebaute Boards: guro.booru.org, gelbooru.com, booru.eu, rule34.xxx, xbooru.com, allgirl.booru.org, zoo.booru.org. Weitere Boards lassen sich in der Oberfläche hinzufügen.
+# Getting Started
 
-## Start
+Double-click imgbrd.exe in the project folder. No window will appear. A yellow ib icon will appear in the system tray next to the clock. Right-clicking it provides the options Open in Browser and Quit. Double-clicking the icon opens the page.
 
-`imgbrd.exe` im Projektordner doppelklicken. Es öffnet sich kein Fenster. In der Symbolleiste neben der Uhr liegt ein gelbes **ib**-Symbol. Rechtsklick darauf bietet **Im Browser öffnen** und **Beenden**. Ein Doppelklick öffnet die Seite.
+The page is then accessible at http://localhost:4178 and on your local network at, for example, http://[Server-IP]:4178.
 
-Die Seite ist dann auf http://localhost:4178 und im lokalen Netz zum Beispiel auf http://10.0.0.2:4178 erreichbar.
+After making changes to the interface, rebuild the application:
 
-Nach Änderungen an der Oberfläche einmal neu bauen:
-
-```bash
 npm install
 npm run exe
-```
 
-Entwicklung mit automatischem Neuladen: `npm run dev`, dann http://localhost:5173. `npm start` startet nur den Server, ohne Symbol in der Symbolleiste.
+For development with automatic reloading, run npm run dev and then open http://localhost:5173. npm start starts the server only, without a system tray icon.
 
-## API-Keys
+# Notes on the Boards
 
-rule34.xxx und gelbooru.com geben Posts nur noch mit einem kostenlosen Schlüssel aus dem eigenen Account heraus. Den Key und die User-ID trägst du im Bereich Zugang ein. Sie bleiben im Browser. Der Export schreibt sie mit in die JSON-Datei.
+Gelbooru 0.2 (rule34, gelbooru, xbooru) supports server-side sorting by newest, score, and random.
 
-- rule34: https://rule34.xxx/index.php?page=account&s=options
-- gelbooru: https://gelbooru.com/index.php?page=account&s=options
+booru.eu (Shimmie) sorts by score. Random mode selects random result pages because order:random returns no results there.
 
-## Hinweise zu den Boards
+The older booru.org sites can only sort by score within a loaded page and do not support true random search. Random mode jumps to random pages instead.
 
-- Gelbooru 0.2 (rule34, gelbooru, xbooru) sortiert serverseitig nach Neueste, Score und Zufall.
-- booru.eu (Shimmie) sortiert nach Score. Zufall wählt zufällige Ergebnisseiten, weil `order:random` dort nichts findet.
-- Die älteren booru.org-Seiten können Score nur innerhalb einer geladenen Seite sortieren und haben keine echte Zufallssuche. Zufall springt dort auf zufällige Seiten.
+Custom boards require a publicly accessible HTTP(S) address and one of the following types: Gelbooru 0.2, Gelbooru 0.1, Shimmie, or Danbooru. If the API host differs from the page host, enter it separately, as with https://api.rule34.xxx for rule34.
 
-Eigene Boards erwarten eine öffentliche http(s)-Adresse und einen der Typen Gelbooru 0.2, Gelbooru 0.1, Shimmie oder Danbooru. Wenn der API-Host vom Seiten-Host abweicht, trägst du ihn extra ein, so wie `https://api.rule34.xxx` bei rule34.
+Tag collections, custom boards, and saved API keys can be exported as JSON. The file contains the access credentials.
 
-Tag-Sammlungen, eigene Boards und die gespeicherten API-Keys lassen sich als JSON exportieren. Die Datei enthält die Zugangsdaten.
+
+# Android App
+The Android app is also very simple.
+It directly requests the images from the websites. There are NO ads, no premium/payed features. Just install and enjoy.
+You may need to click "allow this source" when installing an app from an apk file for the first time.
+Everything else works the same as the desktop version.
+
+# Languages
+It's default language is english. It should also be fine in German, french and spanish. I made this with cursorAI and the translation too, so don't blame me lol.
+
+# Made with CursorAI
+I made the whole thing in half a day with CursorAI. I am not a programmer and I don't have specific plans for the future of this.
+This may never get an update.
+
+# Donation
+If you like it and want to thank me:
+https://buymeacoffee.com/nervine141
