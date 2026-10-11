@@ -9,12 +9,6 @@ Double-click imgbrd.exe in the project folder. No window will appear. A yellow i
 
 The page is then accessible at http://localhost:4178 and on your local network at, for example, http://[Server-IP]:4178.
 
-After making changes to the interface, rebuild the application:
-
-npm install
-npm run exe
-
-For development with automatic reloading, run npm run dev and then open http://localhost:5173. npm start starts the server only, without a system tray icon.
 
 # Notes on the Boards
 
